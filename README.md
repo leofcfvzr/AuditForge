@@ -23,7 +23,7 @@ AuditForge is a fast, extensible static analysis tool for detecting security vul
 
 ```bash
 # From source
-git clone (https://github.com/leofcfvzr/AuditForge)
+git clone https://github.com/leofcfvzr/AuditForge
 cd auditforge
 cargo install --path crates/cli
 
