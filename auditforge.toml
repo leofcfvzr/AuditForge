@@ -1,0 +1,54 @@
+# AuditForge Configuration
+# https://github.com/example/auditforge
+
+# Minimum confidence level to report findings
+# Options: "low", "medium", "high"
+min_confidence = "low"
+
+# Minimum severity level to report findings
+# Options: "info", "low", "medium", "high", "critical"
+min_severity = "info"
+
+# Paths to ignore (glob patterns)
+ignore_paths = [
+    "**/node_modules/**",
+    "**/lib/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/mock/**",
+    "**/mocks/**",
+]
+
+# Rules to run exclusively (empty = all rules)
+# Example: only_rules = ["reentrancy", "access-control"]
+only_rules = []
+
+# Rules to exclude from analysis
+# Example: exclude_rules = ["overflow"]
+exclude_rules = []
+
+# ============================================================================
+# Per-rule configuration
+# ============================================================================
+
+[rules.reentrancy]
+enabled = true
+
+[rules.delegatecall]
+enabled = true
+
+[rules.access-control]
+enabled = true
+
+[rules.unchecked-return]
+enabled = true
+
+[rules.tx-origin]
+enabled = true
+
+[rules.overflow]
+enabled = true
+
+[rules.uninitialized-storage]
+enabled = true
+

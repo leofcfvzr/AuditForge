@@ -1,0 +1,37 @@
+[package]
+name = "auditforge"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "AuditForge CLI for static analysis of smart contracts"
+
+[[bin]]
+name = "auditforge"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true
+indicatif.workspace = true
+rayon.workspace = true
+
+auditforge-core = { path = "../core" }
+auditforge-rules = { path = "../rules" }
+auditforge-solc-parser = { path = "../solc-parser" }
+auditforge-knowledge-base = { path = "../knowledge_base" }
+
+# Additional CLI dependencies
+colored = "2.1"
+walkdir = "2.4"
+glob = "0.3"
+sha2 = "0.10"
+chrono = "0.4"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+tempfile = "3.10"

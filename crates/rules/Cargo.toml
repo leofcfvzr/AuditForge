@@ -1,0 +1,16 @@
+[package]
+name = "auditforge-rules"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Built-in security rules for AuditForge"
+
+[dependencies]
+anyhow.workspace = true
+regex.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+once_cell.workspace = true
+auditforge-core = { path = "../core" }
+
+[dev-dependencies]
